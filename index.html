@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>test</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/reset.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <script type="text/javascript" src="libs/react.min.js"></script>
+  <script type="text/javascript" src="libs/react-dom.min.js"></script>
+  <script type="text/javascript" src="libs/browser.js"></script>
+
+
+</head>
+<body>
+
+  <div id='example'></div>
+
+  <script type="text/babel">
+
+  var Bacon = React.createClass({
+    render: function () {
+      return (<h3>This is the simple component!</h3>)
+    }
+  })
+
+  ReactDOM.render(<Bacon />, document.getElementById('example'));
+  </script>
+
+
+</body>
+</html>
