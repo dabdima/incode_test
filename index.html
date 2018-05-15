@@ -487,13 +487,10 @@
         },
 
         handleSearch: function (event) {
-            //console.log(event.target.value);
             var searchQuery = event.target.value.toLowerCase();
             var displayedClients = CLIENTS.filter(function(el) {
-                // console.log('el= ', el);
                 for (var key in el) {
                     for (var prop in el[key]) {
-                        //console.log('prop= ', el[key][prop]);
                         if ((el[key][prop].toLowerCase()).indexOf(searchQuery) !== -1) return true;
                     }
                 }
@@ -502,15 +499,13 @@
             this.setState({
                 displayedClients: displayedClients
             });
-            // console.log(displayedClients);
-             //console.log(CLIENTS);
 
         },
 
         render: function () {
             return (
                 <div>
-                    <input type="text" className="search-input" onChange={this.handleSearch} />
+                    <input type="text" className="search-input" placeholder="Search..." onChange={this.handleSearch} />
                     {
                         this.state.displayedClients.map(function (el) {
                             return (<Client

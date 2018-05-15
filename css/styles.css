@@ -13,6 +13,9 @@
     margin: 3px;
     padding: 10px;
     border-radius: 4px;
+    background: url(../img/nav-search_icon.png) no-repeat;
+    background-size: 38px 38px;
+    background-position: 99% 50%;
 }
 
 
@@ -20,7 +23,7 @@
 .client-block {
     font-size: 15px;
     width: 400px;
-    height: 150px;
+    height: 142px;
     border: 1px solid #ccc;
     margin: 3px;
     padding: 6px 6px 0 6px;
