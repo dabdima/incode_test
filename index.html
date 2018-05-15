@@ -486,6 +486,7 @@ console.log(CLIENTS);
         },
 
         handleGetInfo: function (e) {
+            //determining id from the click event
             var str = e.dispatchMarker;
             str = str.substring(str.indexOf("$")+1);
             str = Number(str.substring(0, str.indexOf(".")));
