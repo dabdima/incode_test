@@ -6,9 +6,13 @@
 
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
-    <script type="text/javascript" src="libs/react.min.js"></script>
+    <!-- <script type="text/javascript" src="libs/react.min.js"></script>
     <script type="text/javascript" src="libs/react-dom.min.js"></script>
-    <script type="text/javascript" src="libs/browser.js"></script>
+    <script type="text/javascript" src="libs/browser.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
 
 
 </head>
@@ -18,8 +22,9 @@
 
     <script type="text/babel">
 
-    var clients = [
+    var CLIENTS = [
         {
+            "id": 1,
             "general": {
                 "firstName": "Liana",
                 "lastName": "Crooks",
@@ -41,6 +46,7 @@
             }
         },
         {
+            "id": 2,
             "general": {
                 "firstName": "Deontae",
                 "lastName": "Dare",
@@ -62,6 +68,7 @@
             }
         },
         {
+            "id": 3,
             "general": {
                 "firstName": "Cortez",
                 "lastName": "Pacocha",
@@ -83,6 +90,7 @@
             }
         },
         {
+            "id": 4,
             "general": {
                 "firstName": "Geoffrey",
                 "lastName": "Russel",
@@ -104,6 +112,7 @@
             }
         },
         {
+            "id": 5,
             "general": {
                 "firstName": "Christian",
                 "lastName": "Wuckert",
@@ -125,6 +134,7 @@
             }
         },
         {
+            "id": 6,
             "general": {
                 "firstName": "Joana",
                 "lastName": "Breitenberg",
@@ -146,6 +156,7 @@
             }
         },
         {
+            "id": 7,
             "general": {
                 "firstName": "Elton",
                 "lastName": "Pfannerstill",
@@ -167,6 +178,7 @@
             }
         },
         {
+            "id": 8,
             "general": {
                 "firstName": "Alvena",
                 "lastName": "Paucek",
@@ -188,6 +200,7 @@
             }
         },
         {
+            "id": 9,
             "general": {
                 "firstName": "Lew",
                 "lastName": "Daniel",
@@ -209,6 +222,7 @@
             }
         },
         {
+            "id": 10,
             "general": {
                 "firstName": "Darlene",
                 "lastName": "Davis",
@@ -230,6 +244,7 @@
             }
         },
         {
+            "id": 11,
             "general": {
                 "firstName": "Savannah",
                 "lastName": "Predovic",
@@ -251,6 +266,7 @@
             }
         },
         {
+            "id": 12,
             "general": {
                 "firstName": "Nicolette",
                 "lastName": "Rogahn",
@@ -272,174 +288,7 @@
             }
         },
         {
-            "general": {
-                "firstName": "Aidan",
-                "lastName": "Stracke",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/falconerie/128.jpg"
-            },
-            "job": {
-                "company": "Denesik, Dicki and Schmitt",
-                "title": "National Accounts Officer"
-            },
-            "contact": {
-                "email": "Chelsey.Powlowski38@hotmail.com",
-                "phone": "689.859.2512 x81508"
-            },
-            "address": {
-                "street": "498 King Track",
-                "city": "Toy fort",
-                "zipCode": "07905-5925",
-                "country": "Latvia"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Tristin",
-                "lastName": "Eichmann",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/johnriordan/128.jpg"
-            },
-            "job": {
-                "company": "Marvin, Pfannerstill and Braun",
-                "title": "Central Communications Consultant"
-            },
-            "contact": {
-                "email": "Marisa_Miller54@yahoo.com",
-                "phone": "335-788-4534"
-            },
-            "address": {
-                "street": "2686 Ebert Parks",
-                "city": "West Lexus",
-                "zipCode": "70293-4149",
-                "country": "Brazil"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Malika",
-                "lastName": "Feeney",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/dnirmal/128.jpg"
-            },
-            "job": {
-                "company": "Pfannerstill - Christiansen",
-                "title": "Customer Assurance Designer"
-            },
-            "contact": {
-                "email": "Stone15@yahoo.com",
-                "phone": "578-268-2680 x495"
-            },
-            "address": {
-                "street": "415 Homenick Lodge",
-                "city": "North Nelson borough",
-                "zipCode": "05142",
-                "country": "Netherlands"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Ross",
-                "lastName": "Dickens",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/kuldarkalvik/128.jpg"
-            },
-            "job": {
-                "company": "Champlin, Leannon and O'Connell",
-                "title": "Legacy Marketing Coordinator"
-            },
-            "contact": {
-                "email": "Scottie.Swift@hotmail.com",
-                "phone": "165-084-3752 x336"
-            },
-            "address": {
-                "street": "98494 Clemens Oval",
-                "city": "Heller view",
-                "zipCode": "58090",
-                "country": "Mozambique"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Granville",
-                "lastName": "Larson",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/gregkilian/128.jpg"
-            },
-            "job": {
-                "company": "Metz - Bashirian",
-                "title": "Senior Brand Associate"
-            },
-            "contact": {
-                "email": "Judd6@hotmail.com",
-                "phone": "1-817-435-1136 x8014"
-            },
-            "address": {
-                "street": "357 Jeffrey Avenue",
-                "city": "Hand side",
-                "zipCode": "89647-5238",
-                "country": "Morocco"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Donnie",
-                "lastName": "Macejkovic",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/guiiipontes/128.jpg"
-            },
-            "job": {
-                "company": "Schmeler - Romaguera",
-                "title": "Senior Functionality Facilitator"
-            },
-            "contact": {
-                "email": "Camryn_Gerhold@hotmail.com",
-                "phone": "(186) 005-2043"
-            },
-            "address": {
-                "street": "76139 Hayes Plaza",
-                "city": "Emard stad",
-                "zipCode": "45180",
-                "country": "Western Sahara"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Estell",
-                "lastName": "Baumbach",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/janpalounek/128.jpg"
-            },
-            "job": {
-                "company": "Kuphal - Renner",
-                "title": "Principal Mobility Associate"
-            },
-            "contact": {
-                "email": "Cassie_Brekke@yahoo.com",
-                "phone": "1-354-996-2400 x08787"
-            },
-            "address": {
-                "street": "64955 Ottilie Port",
-                "city": "Bartell mouth",
-                "zipCode": "62822-8781",
-                "country": "Belgium"
-            }
-        },
-        {
-            "general": {
-                "firstName": "Amelie",
-                "lastName": "Bradtke",
-                "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vanchesz/128.jpg"
-            },
-            "job": {
-                "company": "Swift LLC",
-                "title": "Dynamic Program Representative"
-            },
-            "contact": {
-                "email": "Prudence.Hane49@yahoo.com",
-                "phone": "699-872-8424"
-            },
-            "address": {
-                "street": "198 White Isle",
-                "city": "Breitenberg land",
-                "zipCode": "02161",
-                "country": "Montserrat"
-            }
-        },
-        {
+            "id": 13,
             "general": {
                 "firstName": "Elmer",
                 "lastName": "D'Amore",
@@ -476,22 +325,42 @@
         }
     })
 
-    var Bacon = React.createClass({
-        handleSearch: function (event) {
-            console.log(event.target.value);
+    var ClientList = React.createClass({
+        getInitialState: function() {
+            return {
+                displayedClients: CLIENTS
+            };
         },
+
+        handleSearch: function (event) {
+            //console.log(event.target.value);
+            var searchQuery = event.target.value.toLowerCase();
+            var displayedClients = CLIENTS.filter(function(el) {
+                var searchValue = el.general.firstName.toLowerCase();
+                return (searchValue.indexOf(searchQuery) !== -1);
+            });
+
+            this.setState({
+                displayedClients: displayedClients
+            });
+            // console.log(displayedClients);
+            // console.log(CLIENTS);
+
+        },
+
         render: function () {
             return (
                 <div>
                     <input type="text" className="search-input" onChange={this.handleSearch} />
                     {
-                        clients.map(function (el) {
-                            return <Client
+                        this.state.displayedClients.map(function (el) {
+                            return (<Client
+                                key={el.id}
                                 fName={el.general.firstName}
                                 lName={el.general.lastName}
                                 job={el.job.title}
                                 image={el.general.avatar}
-                            />
+                            />)
                         })
                     }
                 </div>
@@ -499,7 +368,7 @@
         }
     });
 
-    ReactDOM.render(<Bacon />, document.getElementById('example'));
+    ReactDOM.render(<ClientList />, document.getElementById('example'));
     </script>
 
 
