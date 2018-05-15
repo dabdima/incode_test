@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+
+
+.search-input {
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
 .client-block {
     font-size: 15px;
     width: 400px;
