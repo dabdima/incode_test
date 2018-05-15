@@ -18,10 +18,10 @@
 </head>
 <body>
 
-    <div id='example'></div>
+    <div id='main-container'></div>
 
     <script type="text/babel">
-        var CLIENTS = [
+        var initCLIENTS = [
   {
     "general": {
       "firstName": "Liana",
@@ -465,9 +465,16 @@
   }
 ];
 
+// adding an id for each contact
+var CLIENTS = initCLIENTS;
+for (var i = 0; i < CLIENTS.length; i++) {
+    CLIENTS[i].id = i;
+};
+console.log(CLIENTS);
+
     var Client = React.createClass({
         render: function () {
-            return <div className="client-block">
+            return <div className="client-block"  onClick={this.handleGetInfo}>
                         <div className="client-block-avatar">
                             <img src={this.props.image} width="128px" height="128px" alt=""/>
                         </div>
@@ -476,7 +483,17 @@
                             <p>{this.props.job}</p>
                         </div>
                     </div>
+        },
+
+        handleGetInfo: function (e) {
+            var str = e.dispatchMarker;
+            str = str.substring(str.indexOf("$")+1);
+            str = Number(str.substring(0, str.indexOf(".")));
+            console.log("getInfo", str);
+
+
         }
+
     })
 
     var ClientList = React.createClass({
@@ -504,11 +521,13 @@
 
         render: function () {
             return (
-                <div>
+                <div className="container clearfix">
+                <div className="left-col">
                     <input type="text" className="search-input" placeholder="Search..." onChange={this.handleSearch} />
                     {
                         this.state.displayedClients.map(function (el) {
                             return (<Client
+                                key={el.id}
                                 fName={el.general.firstName}
                                 lName={el.general.lastName}
                                 job={el.job.title}
@@ -517,11 +536,14 @@
                         })
                     }
                 </div>
+                <div className="right-col">
+                </div>
+                </div>
             );
         }
     });
 
-    ReactDOM.render(<ClientList />, document.getElementById('example'));
+    ReactDOM.render(<ClientList />, document.getElementById('main-container'));
     </script>
 
 
